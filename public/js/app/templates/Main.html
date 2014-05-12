@@ -1,0 +1,40 @@
+
+<header data-role="header">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pulsar</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div id="menu" class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+      </ul>
+      <ul  class='nav navbar-nav pull-right'>
+        <% if (_loggedIn) { %>
+        <li><a href='#' data-logout>button</a></li>
+        <% } %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+</header> <!-- /header -->
+
+<div data-role='main' class='magic'>
+  <% if (_loggedIn) { %>
+    <h3>You're logged in, good job!</h3>
+  <% } else { %>
+    <h3>You're not logged in, loser.</h3>
+    <input type='text' placeholder='username' id='username'>
+    <input type='password' placeholder='password' id='password'>
+    <button type='button' data-login>Login</button>
+  <% } %>
+</div>
+
+<footer class="footer navbar-inverse navbar-fixed-bottom" data-role="footer">
+  <p style="text-align:center;margin-top:15px;color:#979797">Written by <a href="https://github.com/cl0udc0ntr0l" target="_blank">Randy Lebeau</a> based on <a href="https://github.com/gfranko/backbone-require-boilerplate" target="_blank">Backbone Require Boilerplate</a> by <a href="https://github.com/gfranko" target="_blank">Greg Franko</a>.</p>
+</footer><!-- /footer -->
