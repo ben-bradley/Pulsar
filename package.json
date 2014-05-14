@@ -1,6 +1,6 @@
 {
   "name": "Pulsar",
-  "description": "Built with theStack!",
+  "description": "",
   "version": "0.0.1",
   "homepage": "https://github.com/ben-bradley/Pulsar",
   "author": {
@@ -20,7 +20,17 @@
   },
   "main": "./server/server",
   "dependencies": {
-    "express": "3.x"
+    "express": "visionmedia/express",
+    "expect.js": "LearnBoost/expect.js",
+    "faye": "faye/faye",
+    "grunt": "gruntjs/grunt",
+    "mongoose": "LearnBoost/mongoose",
+    "superagent": "visionmedia/superagent",
+    "uglify-js": "mishoo/UglifyJS",
+    "grunt-nodemon": "ChrisWren/grunt-nodemon",
+    "grunt-contrib-requirejs": "gruntjs/grunt-contrib-requirejs",
+    "grunt-contrib-jshint": "gruntjs/grunt-contrib-jshint",
+    "grunt-mocha-test": "pghalliday/grunt-mocha-test"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

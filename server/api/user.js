@@ -25,13 +25,14 @@ module.exports = function(app, schemas) {
     res.send({ _loggedIn: false });
   });
 
+  // get all users
   app.get('/api/users', function(req, res) {
-//    schemas.User.model.find({}, function(err, users) {
-//      res.send(users);
-//    });
-    schemas.User.myfindall(function(err, users) {
+    schemas.User.model.find({}, function(err, users) {
       res.send(users);
     });
+//    schemas.User.myfindall(function(err, users) {
+//      res.send(users);
+//    });
   });
 
 };
